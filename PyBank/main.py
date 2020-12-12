@@ -39,4 +39,6 @@ print(f'Average Change: {round(sum(change_in_profit)/len(change_in_profit),2)}')
 print(f'Greatest Increase in Profits: {month_year[max]} (${(str(mpmonth))})')
 print(f'Greatest Decrease in Profits: {month_year[min]} (${(str(mipmonth))})')
 
-
+output = os.path.join('analysis.txt')
+with open(output, 'w') as analysis:
+    analysis.write('Fiancial Analysis\n')
