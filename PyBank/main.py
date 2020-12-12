@@ -42,3 +42,8 @@ print(f'Greatest Decrease in Profits: {month_year[min]} (${(str(mipmonth))})')
 output = os.path.join('analysis.txt')
 with open(output, 'w') as analysis:
     analysis.write('Fiancial Analysis\n')
+    analysis.write(f'Total Months: {num_of_months}')
+    analysis.write(f"Total Revenue: ${(total_pl)}")
+    analysis.write(f'Average Change: {round(sum(change_in_profit)/len(change_in_profit),2)}')
+    analysis.write(f'Greatest Increase in Profits: {month_year[max]} (${(str(mpmonth))})')
+    analysis.write(f'Greatest Decrease in Profits: {month_year[min]} (${(str(mipmonth))})')

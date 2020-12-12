@@ -33,4 +33,14 @@ print('-------------------')
 for key,value in candidates.items():
     print(f'{key}: %{value["Percentage"]} ({value["Votes"]}) ')
 
- print('-------------------')
+print('-------------------')
+print('Winner: Khan')
+print('-------------------')  
+
+output = os.path.join('analysis.txt')
+with open(output, 'w') as analysis:
+    analysis.write('Election Results')
+    analysis.write(f'Total Votes: ${total_vote}')
+    analysis.write(f'{key}: %{value["Percentage"]} ({value["Votes"]}) ')
+    analysis.write('Winner: Khan')
+    
